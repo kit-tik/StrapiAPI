@@ -1,0 +1,28 @@
+{
+  "kind": "collectionType",
+  "collectionName": "cas_refs",
+  "info": {
+    "singularName": "cas-ref",
+    "pluralName": "cas-refs",
+    "displayName": "CASRef",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "RefName": {
+      "type": "string"
+    },
+    "RefDetails": {
+      "type": "text"
+    },
+    "cas": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::cas.cas",
+      "mappedBy": "cas_ref"
+    }
+  }
+}

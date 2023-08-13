@@ -1,0 +1,7 @@
+/**
+ * cas-ref router
+ */
+
+import { factories } from '@strapi/strapi';
+
+export default factories.createCoreRouter('api::cas-ref.cas-ref');

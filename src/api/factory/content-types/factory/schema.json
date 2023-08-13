@@ -1,0 +1,44 @@
+{
+  "kind": "collectionType",
+  "collectionName": "factories",
+  "info": {
+    "singularName": "factory",
+    "pluralName": "factories",
+    "displayName": "Factory"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "factoryName": {
+      "type": "string",
+      "unique": true,
+      "required": true
+    },
+    "tradeName": {
+      "type": "string"
+    },
+    "business": {
+      "type": "string"
+    },
+    "address": {
+      "type": "string"
+    },
+    "province": {
+      "type": "string"
+    },
+    "zip": {
+      "type": "biginteger"
+    },
+    "contact": {
+      "type": "string"
+    },
+    "email": {
+      "type": "string"
+    },
+    "phone": {
+      "type": "string"
+    }
+  }
+}

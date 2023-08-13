@@ -1,0 +1,43 @@
+{
+  "kind": "collectionType",
+  "collectionName": "products",
+  "info": {
+    "singularName": "product",
+    "pluralName": "products",
+    "displayName": "Product",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "ProductName": {
+      "type": "string",
+      "required": true
+    },
+    "Details": {
+      "type": "richtext"
+    },
+    "ca": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::cas.cas",
+      "inversedBy": "products"
+    },
+    "attachments": {
+      "type": "media",
+      "multiple": true,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "shortDesc": {
+      "type": "text"
+    }
+  }
+}

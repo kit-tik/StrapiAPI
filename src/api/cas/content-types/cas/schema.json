@@ -1,0 +1,42 @@
+{
+  "kind": "collectionType",
+  "collectionName": "cases",
+  "info": {
+    "singularName": "cas",
+    "pluralName": "cases",
+    "displayName": "CAS",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "CASNo": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    },
+    "EC": {
+      "type": "string"
+    },
+    "Designation": {
+      "type": "string"
+    },
+    "Acronym": {
+      "type": "string"
+    },
+    "cas_ref": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::cas-ref.cas-ref",
+      "inversedBy": "cas"
+    },
+    "products": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::product.product",
+      "mappedBy": "ca"
+    }
+  }
+}
